@@ -11,7 +11,7 @@ public class CalculadoraTest {
      * <p><b>Entrada : </b></p>
      * <p>- numero1 = 2</p>
      * <p>- numero2 = 3</p>
-     * <p><b>Saída : </b> 5 </p>
+     * <p><b>Saída : </b>5 </p>
      */
     @Test
     public void testarSomaDoisNumerosInteirosPositivos() {
@@ -34,7 +34,7 @@ public class CalculadoraTest {
      * <p><b>Entrada : </b></p>
      * <p>- numero1 = 5</p>
      * <p>- numero2 = -2</p>
-     * <p><b>Saída : </b> 3 </p>
+     * <p><b>Saída : </b>3 </p>
      */
     @Test
     public void testarSomaDoisNumerosInteirosPositivoENegativo() {
