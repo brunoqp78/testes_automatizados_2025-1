@@ -1,10 +1,48 @@
 package org.iftm.testes.calculadoraaula.calculadora;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class CalculadoraTest {
-    
+    private static Calculadora calculadora;
+
+    /**
+     * Configurar a execução do teste uma única vez
+     */
+    @BeforeAll
+    public static void configurarTestesGeral(){
+        System.out.println("Iniciar Teste");
+        calculadora = new Calculadora();
+    }
+
+    @AfterAll
+    public static void finalizarTestesGeral(){
+        System.out.println("Fim do Teste");
+    }
+
+    /**
+     * Configurar cada execução de teste.
+     * Executa ao inicio de cada método de teste com notação @Test
+     */
+    @BeforeEach
+    public void configurarTestes(){
+        System.out.println("Começou");
+    }
+
+
+    /**
+     * Finalizar a execução de cada teste.
+     * Executa ao fim da execução de cada método de teste com notação @Test
+     */
+    @AfterEach
+    public void finalizarTeste(){
+        System.out.println("Fechou!!!!!!!!!!!!!!!!");
+    }
+
     /**
      * Testa a soma de dois números inteiros positivos
      * <p><b>Cenário : </b> Somar dois números positivos</p>
@@ -16,7 +54,6 @@ public class CalculadoraTest {
     @Test
     public void testarSomaDoisNumerosInteirosPositivos() {
         //arrange
-        Calculadora calculadora = new Calculadora();
         int primeiroNumero = 2;
         int segundoNumero = 3;
         int resultadoEsperado = 5;
@@ -38,7 +75,6 @@ public class CalculadoraTest {
     @Test
     public void testarSomaDoisNumerosInteirosPositivoENegativo() {
         //arrange
-        Calculadora calculadora = new Calculadora();
         int primeiroNumero = 5;
         int segundoNumero = -2;
         int resultadoEsperado = 3;
@@ -60,7 +96,6 @@ public class CalculadoraTest {
     @Test
     public void testarSubtrairDoisNumerosInteirosPositivosRespostaPositiva() {
         //arrange
-        Calculadora calculadora = new Calculadora();
         int primeiroNumero = 5;
         int segundoNumero = 3;
         int resultadoEsperado = 2;
@@ -81,7 +116,6 @@ public class CalculadoraTest {
     @Test
     public void testarSubtrairDoisNumerosInteirosPositivosRespostaNegativa() {
         //arrange
-        Calculadora calculadora = new Calculadora();
         int primeiroNumero = 5;
         int segundoNumero = 7;
         int resultadoEsperado = -2;
@@ -103,7 +137,6 @@ public class CalculadoraTest {
     @Test
     public void testarSubtrairDoisNumerosInteirosPositivoNegativoRespostaPositiva() {
         //arrange
-        Calculadora calculadora = new Calculadora();
         int primeiroNumero = 5;
         int segundoNumero = -2;
         int resultadoEsperado = 7;
@@ -125,7 +158,6 @@ public class CalculadoraTest {
     @Test
     public void testarSubtrairDoisNumerosInteirosPositivoMenorNegativoMaiorRespostaPositiva() {
         //arrange
-        Calculadora calculadora = new Calculadora();
         int primeiroNumero = 5;
         int segundoNumero = -6;
         int resultadoEsperado = 11;
@@ -147,7 +179,6 @@ public class CalculadoraTest {
     @Test
     public void testarSubtrairDoisNumerosInteirosNegativoPositivoRespostaPositiva() {
         //arrange
-        Calculadora calculadora = new Calculadora();
         int primeiroNumero = -5;
         int segundoNumero = -6;
         int resultadoEsperado = 1;
@@ -169,7 +200,6 @@ public class CalculadoraTest {
     @Test
     public void testarSubtrairDoisNumerosInteirosNegativoPositivoRespostaNegativo() {
         //arrange
-        Calculadora calculadora = new Calculadora();
         int primeiroNumero = -5;
         int segundoNumero = -4;
         int resultadoEsperado = -1;
@@ -191,7 +221,6 @@ public class CalculadoraTest {
     @Test
     public void testarMultiplicarDoisNumerosInteirosPositivos() {
         //arrange
-        Calculadora calculadora = new Calculadora();
         int primeiroNumero = 2;
         int segundoNumero = 3;
         int resultadoEsperado = 6;
@@ -213,7 +242,6 @@ public class CalculadoraTest {
     @Test
     public void testarMultiplicarInteiroPositivoPorInteiroNegativo() {
         //arrange
-        Calculadora calculadora = new Calculadora();
         int primeiroNumero = 2;
         int segundoNumero = -3;
         int resultadoEsperado = -6;
@@ -235,7 +263,6 @@ public class CalculadoraTest {
     @Test
     public void testarMultiplicarInteiroNegativoPorInteiroPositivo() {
         //arrange
-        Calculadora calculadora = new Calculadora();
         int primeiroNumero = -2;
         int segundoNumero = 3;
         int resultadoEsperado = -6;
@@ -257,7 +284,6 @@ public class CalculadoraTest {
     @Test
     public void testarMultiplicarDoisInteirosPositivos() {
         //arrange
-        Calculadora calculadora = new Calculadora();
         int primeiroNumero = -2;
         int segundoNumero = -3;
         int resultadoEsperado = 6;
@@ -279,7 +305,6 @@ public class CalculadoraTest {
     @Test
     public void testarMultiplicarPorZero() {
         //arrange
-        Calculadora calculadora = new Calculadora();
         int primeiroNumero = 5;
         int segundoNumero = 0;
         int resultadoEsperado = 0;
@@ -301,7 +326,6 @@ public class CalculadoraTest {
     @Test
     public void testarDividirDoisInteirosPositivosResultadoExato() {
         //arrange
-        Calculadora calculadora = new Calculadora();
         int primeiroNumero = 6;
         int segundoNumero = 3;
         int resultadoEsperado = 2;
@@ -323,7 +347,6 @@ public class CalculadoraTest {
     @Test
     public void testarDividirDoisInteirosPositivosResultadoComFracao() {
         //arrange
-        Calculadora calculadora = new Calculadora();
         int primeiroNumero = 5;
         int segundoNumero = 2;
         int resultadoEsperado = 2;
@@ -345,7 +368,6 @@ public class CalculadoraTest {
     @Test
     public void testarDividirComNumeroNegativoResultaNegativo() {
         //arrange
-        Calculadora calculadora = new Calculadora();
         int primeiroNumero = 5;
         int segundoNumero = -2;
         int resultadoEsperado = -2;
@@ -367,7 +389,6 @@ public class CalculadoraTest {
     @Test
     public void testarDividirPorZeroGeraErro() {
         //arrange
-        Calculadora calculadora = new Calculadora();
         int primeiroNumero = 5;
         int segundoNumero = 0;
         int resultadoEsperado =-1;
