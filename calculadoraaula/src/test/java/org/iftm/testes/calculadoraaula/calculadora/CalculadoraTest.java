@@ -551,7 +551,7 @@ public class CalculadoraTest {
                 () -> {
                     calculadora.dividir(primeiroNumero, segundoNumero);
                 });
-        
-        assertEquals(mensagemEsperada, resultadoObtido.getMessage());
+
+        assertEquals(mensagemEsperada, resultadoObtido.getMessage(), "Mensagem da Exception incorreta.");
     }
 }
