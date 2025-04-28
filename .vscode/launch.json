@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-AulaPessoaTddApplication<aula-pessoa-tdd>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "org.iftm.aula_pessoa_tdd.AulaPessoaTddApplication",
+            "projectName": "aula-pessoa-tdd",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
