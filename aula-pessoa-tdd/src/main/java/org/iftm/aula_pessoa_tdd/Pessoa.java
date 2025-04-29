@@ -4,43 +4,59 @@ public class Pessoa {
     private String nome;
     private double salario;
 
-    public Pessoa(String nome) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setSalario'");
-    }
+    public Pessoa(){}
 
-    public Pessoa() {
+    public Pessoa(String nome) {
+        this.nome = validaNome(nome);
     }
 
     public String getNome() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setSalario'");
+        return nome;
+    }
+    public double getSalario() {
+        return salario;
     }
 
     public void setNome(String nome) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setSalario'");
-
+        this.nome = validaNome(nome);
     }
 
-    public String validaNome(String nome) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setSalario'");
+    private String validaNome(String nome){
+        if (nome.length()>=2 && nome.length()<=100){
+            return nome.toUpperCase();
+        }else{
+            throw new IllegalArgumentException("Nome inválido, precisa ter entre 2 e 200 caracteres.");
+        }
     }
 
-    public void setSalario(double salarioInicial) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setSalario'");
+    public void setSalario(double salario) {
+        this.salario = validaSalario(salario);
     }
 
-    public double getSalario() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getSalario'");
+    public double validaSalario(double salario){
+        if (salario >= 1518 && salario <=1000000)
+           return salario;
+        else{
+            throw new IllegalArgumentException("Salário inválido, precisa ter um valor entre 1518.00 e 1000000.00");
+        }
     }
 
-    public void reajustarSalario(double reajuste) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'reajustarSalario'");
+    public void reajustarSalario(double porcentagem) {
+        if (porcentagem >= 1 && porcentagem <= 100){
+            salario += validaReajuste(porcentagem);
+        }else{
+            throw new IllegalArgumentException("Porcentagem de reajuste inválida, valores válidos entre 1 e 100.");
+        }
     }
+
+    public double validaReajuste(double porcentagem){
+            double aumento = salario * porcentagem/100;
+            if (salario+aumento > 1000000){
+                throw new IllegalArgumentException("Reajuste ultrapassa limite de salário de R$ 1000000.00.");
+            }else{
+                return aumento;
+            }
+    }
+
 
 }
