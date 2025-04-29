@@ -5,28 +5,42 @@ public class Pessoa {
     private double salario;
 
     public Pessoa(String nome) {
-        this.nome = validaNome(nome);
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setSalario'");
     }
 
     public Pessoa() {
     }
 
     public String getNome() {
-        return nome;
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setSalario'");
     }
 
     public void setNome(String nome) {
-        this.nome = validaNome(nome);
-        
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setSalario'");
+
     }
 
+    public String validaNome(String nome) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setSalario'");
+    }
 
-    public String validaNome(String nome){
-        if (nome.length()>=2 && nome.length()<=100){
-            return nome.toUpperCase();
-        }else{
-            throw new IllegalArgumentException("Nome inválido, precisa ter entre 2 e 200 caracteres.");
-        }
+    public void setSalario(double salarioInicial) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setSalario'");
+    }
+
+    public double getSalario() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getSalario'");
+    }
+
+    public void reajustarSalario(double reajuste) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'reajustarSalario'");
     }
 
 }
