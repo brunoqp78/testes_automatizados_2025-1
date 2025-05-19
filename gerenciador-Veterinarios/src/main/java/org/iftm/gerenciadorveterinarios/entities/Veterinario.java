@@ -20,8 +20,6 @@ public class Veterinario {
     private String email;
     private String especialidade;
     private BigDecimal salario;
-
-    @oneto
     
     public Veterinario() {
     }
