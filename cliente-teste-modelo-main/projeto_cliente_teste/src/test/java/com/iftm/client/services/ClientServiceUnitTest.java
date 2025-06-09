@@ -15,7 +15,7 @@ import com.iftm.client.repositories.ClientRepository;
 import com.iftm.client.services.exceptions.ResourceNotFoundException;
 
 @ExtendWith(SpringExtension.class)
-public class ClientServiceTest {
+public class ClientServiceUnitTest {
 
     @InjectMocks
     private ClientService servico;

@@ -1,11 +1,9 @@
 package org.brsoft.service;
 
 import org.brsoft.entity.Calculadora;
-import org.springframework.beans.factory.annotation.Autowired;
 
 public class CalculadoraService {
-	@Autowired
-	private Calculadora calc;
+	private Calculadora calc = new Calculadora();
 	
 	public double calculo(double n1, double n2) {
 		if (n1==10.0)	{
