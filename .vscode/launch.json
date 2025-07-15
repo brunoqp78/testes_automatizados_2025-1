@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ExemploSeleniumWebdriverApplication",
+            "request": "launch",
+            "mainClass": "org.iftm.exemplo_selenium_webdriver.ExemploSeleniumWebdriverApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-AulaPessoaTddApplication<aula-pessoa-tdd>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
